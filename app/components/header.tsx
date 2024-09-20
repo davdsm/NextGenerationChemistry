@@ -16,11 +16,11 @@ export default function Header() {
               </Link>
             </li>
 
-            {/* <li>
-              <Link to="/bioShade" className="text-gradient font-medium">
+            <li>
+              <Link to="/bioshade" className="text-gradient font-medium">
                 BioShade
               </Link>
-            </li> */}
+            </li>
 
             {/* <li>
               <Link to="/news" className="text-black font-medium">
