@@ -10,7 +10,7 @@ export default function Chemistry() {
       </div>
 
       <div className="lg:w-1/2 h-full flex items-center justify-center p-8 text-center lg:text-left pt-0 lg:pt-8">
-        <p>
+        <p className="text-main-black">
           We are redefining the future of the textile industry through the power
           of nature. Our mission is to transform the textile sector into a
           cleaner, more sustainable, and environmentally-friendly industry by

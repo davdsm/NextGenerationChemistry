@@ -7,12 +7,12 @@ export default {
       fontFamily: {
         sans: ['"Poppins"', "sans-serif"],
         jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
-        inter: ['"Inter"', "sans-serif"]
+        inter: ['"Inter"', "sans-serif"],
       },
       colors: {
         main: "#474D78",
         second: "#86DFCC",
-        gradient: "linear-gradient(90deg, #86DFCC 0%, #486284 29%)",
+        "main-black": "#2D2E2E",
       },
       backgroundImage: {
         "gradient-main": "linear-gradient(90deg, #86DFCC 0%, #486284 29%)",

@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
+import Achievements from "~/components/home/achievements";
 import Chemistry from "~/components/home/chemistry";
 import Harmony from "~/components/home/harmony";
+import OnGoing from "~/components/home/ongoing";
 import Video from "~/components/home/video";
 
 export const meta: MetaFunction = () => {
@@ -18,6 +20,10 @@ export default function Index() {
       <Chemistry />
 
       <Harmony />
+
+      <OnGoing />
+
+      <Achievements />
     </>
   );
 }
