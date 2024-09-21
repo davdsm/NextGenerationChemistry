@@ -9,7 +9,7 @@ export default function Header() {
         </Link>
 
         <nav>
-          <ul className="flex gap-16">
+          <ul className="flex gap-8 lg:gap-16">
             <li>
               <Link to="/about-us" className="text-black font-medium">
                 What About Us

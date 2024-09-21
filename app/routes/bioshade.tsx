@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Link } from "@remix-run/react";
-
+import { useMediaQuery } from "react-responsive";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function BioShade() {
   const [activeColor, setActiveColor] = useState("N0004");
   const [activeTissue, setActiveTissue] = useState("polyamide");
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
     <section className="pb-40 pt-[72px]">
@@ -28,26 +31,77 @@ export default function BioShade() {
         </div>
         <div id="script" className="container mx-auto">
           <div id="management">
-            <div className="group colors">
-              <h3>Cor</h3>
-              <ul id="colorsList">
-                {colors
-                  .filter((c) => c.tissue === activeTissue)
-                  .map((color) => (
-                    <li
-                      key={color.code}
-                      className={color.code === activeColor ? "active" : ""}
-                    >
-                      <button
-                        style={{ backgroundColor: color.color }}
-                        onClick={() => setActiveColor(color.code)}
+            {isMobile ? (
+              <>
+                <h3 className="cor">Cor</h3>
+
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={16}
+                  slidesPerView={4}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                  slidesPerGroup={4}
+                  style={{ height: 100 }}
+                >
+                  {colors
+                    .filter((c) => c.tissue === activeTissue)
+                    .map((color) => (
+                      <SwiperSlide key={color.code}>
+                        <li
+                          key={color.code}
+                          className={`${
+                            color.code === activeColor ? "active" : ""
+                          } text-center `}
+                        >
+                          <button
+                            style={{ backgroundColor: color.color }}
+                            onClick={() => setActiveColor(color.code)}
+                            className="p-2 rounded-[20px]"
+                          >
+                            {color.text}
+                          </button>
+                        </li>
+                      </SwiperSlide>
+                    ))}
+                  <div
+                    className="swiper-button-next bg-black rounded-lg"
+                    style={{ right: 0, width: 33, height: 33, marginTop: 0 }}
+                  >
+                    <img src="/icons/arrow-right.svg" alt="Slide next" />
+                  </div>
+                  <div
+                    className="swiper-button-prev bg-black rounded-lg rotate-180"
+                    style={{ left: 0, width: 33, height: 33, marginTop: 0 }}
+                  >
+                    <img src="/icons/arrow-right.svg" alt="Slide next" />
+                  </div>
+                </Swiper>
+              </>
+            ) : (
+              <div className="group colors">
+                <h3>Cor</h3>
+                <ul id="colorsList">
+                  {colors
+                    .filter((c) => c.tissue === activeTissue)
+                    .map((color) => (
+                      <li
+                        key={color.code}
+                        className={color.code === activeColor ? "active" : ""}
                       >
-                        {color.text}
-                      </button>
-                    </li>
-                  ))}
-              </ul>
-            </div>
+                        <button
+                          style={{ backgroundColor: color.color }}
+                          onClick={() => setActiveColor(color.code)}
+                        >
+                          {color.text}
+                        </button>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            )}
             <div className="group tissue">
               <h3>Tecido</h3>
               <ul id="tissuesList">
@@ -86,12 +140,15 @@ export default function BioShade() {
         </div>
 
         <div id="body" className="">
-          <div id="about" className="texts">
-            <div>
+          <div
+            id="about"
+            className="texts flex flex-col lg:flex-row items-center gap-4"
+          >
+            <div className="text-center">
               <span>Código</span>
               <p>TD-C16-i02</p>
             </div>
-            <div>
+            <div className="text-center">
               <span>Aviso</span>
               <p>2022-C16i02-10</p>
             </div>

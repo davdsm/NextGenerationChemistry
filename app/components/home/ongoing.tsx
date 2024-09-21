@@ -1,5 +1,6 @@
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useMediaQuery } from "react-responsive";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,8 +15,7 @@ const projects = [
   {
     image: "fermentation.jpeg",
     title: "Precise Fermentation",
-    description:
-      "Finding new ways to produce molecules.",
+    description: "Finding new ways to produce molecules.",
   },
   {
     image: "bio.png",
@@ -26,17 +26,22 @@ const projects = [
 ];
 
 export default function OnGoing() {
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+  const BUTTON_SIZE = isMobile ? 33 : 66;
+
   return (
     <section
       className="bg-cover bg-center flex items-center py-10 lg:py-32 flex-col lg:flex-row"
-      style={{ backgroundImage: "url(/images/onGoing.svg)" }}
+      style={{ backgroundImage: "url(/images/onGoingBackground.svg)" }}
     >
       <div className="lg:w-1/2 flex justify-center">
         <div className="p-8">
-          <h1 className="text-5xl font-medium text-main-black font-jakarta text-center lg:text-left">
-            On Going
-          </h1>
-          <p className="text-main-black mt-6 font-poppins max-w-sm">
+          <img
+            src="/images/ongoing.png"
+            alt="On Going"
+            className="max-w-[230px] lg:-ml-[5px] mx-auto"
+          />
+          <p className="text-main-black mt-6 font-poppins max-w-sm text-center lg:text-left">
             Our journey is one of transformation—turning what was once
             destructive into something beautifully sustainable. With the wisdom
             of nature as our guide, we craft solutions that honor the earth and
@@ -54,7 +59,7 @@ export default function OnGoing() {
         <Swiper
           modules={[Navigation]}
           spaceBetween={16}
-          slidesPerView={1.7}
+          slidesPerView={isMobile ? 1.3 : 1.7}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -70,11 +75,13 @@ export default function OnGoing() {
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
                 />
                 <div
-                  className="rounded-lg absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"
-                  style={{ clipPath: "inset(0 round 16px)" }}
+                  className="rounded-lg absolute inset-0 bg-black bg-opacity-50 lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"
+                  style={{ clipPath: "inset(0 round 10px)" }}
                 >
                   <div>
-                    <h3 className="text-xl font-medium font-jakarta">{title}</h3>
+                    <h3 className="text-xl font-medium font-jakarta">
+                      {title}
+                    </h3>
                     <p className="mt-2 text-xs font-poppins">{description}</p>
                   </div>
                 </div>
@@ -83,7 +90,7 @@ export default function OnGoing() {
           ))}
           <div
             className="swiper-button-next bg-white rounded-lg"
-            style={{ right: 30, width: 66, height: 66 }}
+            style={{ right: 30, width: BUTTON_SIZE, height: BUTTON_SIZE }}
           >
             <img src="/icons/arrow-right-black.svg" alt="Slide next" />
           </div>

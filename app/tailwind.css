@@ -24,7 +24,7 @@ body {
   }
 }
 
-.swiper-button-next::after {
+.swiper-button-next::after, .swiper-button-prev::after {
   display: none;
 }
 
@@ -144,7 +144,7 @@ body {
   padding: 70px;
 }
 
-#script .group h3 {
+#script .group h3, .cor {
   font-size: 18px;
   font-weight: 600;
   color: #21232f;
@@ -188,11 +188,15 @@ body {
   transform: translateY(-2px);
 }
 
+.swiper-slide li.active button {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
 #script .group.tissue ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 0 0 40px 0;
+  /* padding: 0 0 0 0; */
   flex-wrap: wrap;
   margin: 0;
 }
@@ -318,11 +322,14 @@ div#sponsors {
   width: 40%;
 }
 @media only screen and (max-width: 600px) {
+  .group.tissue {
+    margin: 15px 0 0 0;
+  }
   #banner {
     top: 0px;
   }
   #intro {
-    margin: -140px 0 90px 0;
+    margin: 0 0 50px 0;
   }
   #script {
     flex-wrap: wrap;
@@ -330,7 +337,8 @@ div#sponsors {
   }
   #script #management {
     width: 100%;
-    padding: 50px;
+    padding: 35px;
+    padding-bottom: 0;
   }
   #script #viewer {
     width: 100%;
