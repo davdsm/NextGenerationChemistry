@@ -11,6 +11,9 @@ import "./tailwind.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
+import "swiper/css";
+import "swiper/css/navigation";
+
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

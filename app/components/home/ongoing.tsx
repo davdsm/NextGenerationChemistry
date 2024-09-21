@@ -2,9 +2,6 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
 const projects = [
   {
     image: "EcoCleanTex.svg",
