@@ -1,7 +1,7 @@
 export default function Achievements() {
   return (
     <section className="container mx-auto px-10 py-20">
-      <h2 className="text-gradient-second font-jakarta text-5xl font-medium mb-4 text-center">
+      <h2 className="text-gradient-second font-jakarta text-4xl lg:text-5xl font-medium mb-4 text-center">
         Achievements
       </h2>
       <p className="text-poppins max-w-2xl mx-auto mb-24 text-center">

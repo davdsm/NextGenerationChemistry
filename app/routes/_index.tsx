@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import Achievements from "~/components/home/achievements";
 import Chemistry from "~/components/home/chemistry";
+import Future from "~/components/home/future";
 import Harmony from "~/components/home/harmony";
 import OnGoing from "~/components/home/ongoing";
 import Video from "~/components/home/video";
@@ -24,6 +25,8 @@ export default function Index() {
       <OnGoing />
 
       <Achievements />
+
+      <Future />
     </>
   );
 }

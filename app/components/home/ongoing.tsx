@@ -10,9 +10,16 @@ const projects = [
       "Sustainable biosurfactant-based detergents for textile applications.",
   },
   {
-    image: "fermentation.jpeg",
-    title: "Precise Fermentation",
-    description: "Finding new ways to produce molecules.",
+    image: "bio.png",
+    title: "Make it bio",
+    description:
+      "Sustainable biosurfactant-based detergents for textile applications.",
+  },
+  {
+    image: "EcoCleanTex.svg",
+    title: "EcoCleanTex",
+    description:
+      "Sustainable biosurfactant-based detergents for textile applications.",
   },
   {
     image: "bio.png",
