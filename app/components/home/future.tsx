@@ -39,7 +39,7 @@ export default function Future() {
           rel="noreferrer"
           className="bg-[#1C1D2E] gap-10 py-3 px-7 w-fit mt-5 flex mx-auto lg:mx-0"
         >
-          <img src={`/images/kod.png`} alt="KOD bio" />
+          <img src={`/images/kod.svg`} alt="KOD bio" />
 
           <img src={`/icons/small-arrow-right.svg`} alt="KOD bio" />
         </a>
