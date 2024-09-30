@@ -7,6 +7,7 @@ export default function Future() {
             src={`/images/future-1.jpg`}
             alt="Future is Coming"
             className="w-full h-full object-cover rounded-lg"
+            data-aos="fade-up"
           />
         </div>
 
@@ -15,6 +16,7 @@ export default function Future() {
             src={`/images/future-2.jpg`}
             alt="Future is Coming"
             className="w-full h-full object-cover rounded-lg"
+            data-aos="fade-up"
           />
         </div>
       </div>
@@ -23,12 +25,17 @@ export default function Future() {
         <img
           src={`/images/formula.png`}
           alt="Future is Coming"
-          className="w-[170px] h-[181px] absolute top-0 right-0 hidden lg:block"
+          className="w-[170px] h-[181px] absolute top-0 right-0 hidden lg:block formula"
+          data-aos="fade-up"
+          data-aos-delay="200"
         />
-        <h2 className="font-medium font-jakarta text-5xl mb-6 ">
+        <h2
+          className="font-medium font-jakarta text-5xl mb-6"
+          data-aos="fade-up"
+        >
           Future is <br /> Coming
         </h2>
-        <p className="m-0 font-poppins max-w-[388px]">
+        <p className="m-0 font-poppins max-w-[388px]" data-aos="fade-up">
           Let’s embody your beautiful ideas together, simplify the way you
           visualize your next big things.
         </p>
@@ -38,6 +45,7 @@ export default function Future() {
           target="_blank"
           rel="noreferrer"
           className="bg-[#1C1D2E] gap-10 py-3 px-7 w-fit mt-5 flex mx-auto lg:mx-0"
+          data-aos="fade-up"
         >
           <img src={`/images/kod.svg`} alt="KOD bio" />
 

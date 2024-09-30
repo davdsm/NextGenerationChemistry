@@ -4,11 +4,18 @@ export default function AboutUs() {
     <>
       <section className="pt-24 container mx-auto px-6">
         <div className="flex gap-20 pt-8 lg:pt-20 items-center mb-6 lg:mb-0">
-          <h2 className="font-inter text-[160px] opacity-10 font-medium min-w-80 hidden sm:block">
+          <h2
+            className="font-inter text-[160px] opacity-10 font-medium min-w-80 hidden sm:block"
+            data-aos="fade-up"
+            style={{ opacity: "0.1 !important" }}
+          >
             01
           </h2>
 
-          <h1 className="font-jakarta text-5xl font-semibold text-center lg:text-left">
+          <h1
+            className="font-jakarta text-5xl font-semibold text-center lg:text-left"
+            data-aos="fade-up"
+          >
             What About Us?
           </h1>
         </div>
@@ -17,7 +24,7 @@ export default function AboutUs() {
           <div className="min-w-80 hidden sm:block" />
 
           <div>
-            <p>
+            <p data-aos="fade-up">
               At NGC, we believe in "<b>Empower Chemistry by Nature</b>,"
               leveraging cutting-edge biotechnology to develop eco-friendly
               solutions that reduce environmental impact while maintaining high
@@ -30,7 +37,7 @@ export default function AboutUs() {
               planet.
             </p>
 
-            <p className="mt-6">
+            <p className="mt-6" data-aos="fade-up">
               We are the alchemists of tomorrow, weaving the wisdom of nature
               into the very fabric of industry. Our vision is bold yet simple:
               to transform the textile world into a realm where{" "}
@@ -43,13 +50,16 @@ export default function AboutUs() {
         </div>
 
         <div className="flex py-20 gap-10 lg:gap-20 items-center justify-between flex-col lg:flex-row">
-          <h2 className="font-jakarta text-5xl font-semibold min-w-80 text-center lg:text-left">
+          <h2
+            className="font-jakarta text-5xl font-semibold min-w-80 text-center lg:text-left"
+            data-aos="fade-up"
+          >
             Future is <br /> now!
           </h2>
 
-          <img src="/images/future.svg" alt="Future" />
+          <img src="/images/future.svg" alt="Future" data-aos="fade-up" />
 
-          <p className="max-w-96">
+          <p className="max-w-96" data-aos="fade-up">
             Imagine a future where every thread tells a story of harmony with
             the environment, where every color is born from renewable resources,
             and where the art of making is also the art of preserving. At NGC,
@@ -63,7 +73,10 @@ export default function AboutUs() {
         </div>
 
         <div className="pb-20 lg:py-20">
-          <h2 className="mb-10 lg:mb-20 font-jakarta text-5xl font-semibold text-center">
+          <h2
+            className="mb-10 lg:mb-20 font-jakarta text-5xl font-semibold text-center"
+            data-aos="fade-up"
+          >
             People Around Us
           </h2>
 
@@ -72,12 +85,14 @@ export default function AboutUs() {
               src="/images/devan.svg"
               alt="Devan"
               className="w-1/2 mx-auto  lg:m-0 lg:w-auto"
+              data-aos="fade-up"
             />
 
             <img
               src="/images/eurodye.svg"
               alt="Eurodye"
               className="w-1/2 mx-auto lg:m-0 lg:w-auto"
+              data-aos="fade-up"
             />
           </div>
         </div>

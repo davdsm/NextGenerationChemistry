@@ -35,7 +35,7 @@ export default function OnGoing() {
 
   return (
     <section
-      className="bg-cover bg-center flex items-center py-10 lg:py-32 flex-col lg:flex-row"
+      className="bg-cover bg-center flex items-center py-10 lg:py-32 flex-col lg:flex-row animated-bg-section"
       style={{ backgroundImage: "url(/images/onGoingBackground.svg)" }}
     >
       <div className="lg:w-1/2 flex justify-center">
@@ -44,8 +44,12 @@ export default function OnGoing() {
             src="/images/ongoing.png"
             alt="On Going"
             className="max-w-[230px] lg:-ml-[5px] mx-auto"
+            data-aos="fade-up"
           />
-          <p className="text-main-black mt-6 font-poppins max-w-sm text-center lg:text-left">
+          <p
+            className="text-main-black mt-6 font-poppins max-w-sm text-center lg:text-left"
+            data-aos="fade-up"
+          >
             Our journey is one of transformation—turning what was once
             destructive into something beautifully sustainable. With the wisdom
             of nature as our guide, we craft solutions that honor the earth and
@@ -59,7 +63,7 @@ export default function OnGoing() {
         </div>
       </div>
 
-      <div className="lg:w-1/2 overflow-hidden max-w-full">
+      <div className="lg:w-1/2 overflow-hidden max-w-full" data-aos="fade-up">
         <Swiper
           modules={[Navigation]}
           spaceBetween={16}

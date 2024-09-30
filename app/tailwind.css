@@ -24,7 +24,56 @@ body {
   }
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.formula {
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(10px) translateY(-30px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animated-bg {
+  animation: moveBackground 15s ease-in-out infinite;
+}
+
+@keyframes moveBackground2 {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: 80% 60%; /* Movimento mais pronunciado */
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+.animated-bg-section {
+  background-size: cover;
+  background-position: center;
+  animation: moveBackground2 15s ease-in-out infinite; /* Animação */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
   display: none;
 }
 
@@ -144,7 +193,8 @@ body {
   padding: 70px;
 }
 
-#script .group h3, .cor {
+#script .group h3,
+.cor {
   font-size: 18px;
   font-weight: 600;
   color: #21232f;
@@ -373,5 +423,4 @@ div#sponsors {
   #btn-contacts {
     margin: 0 0 10px 0;
   }
-
 }

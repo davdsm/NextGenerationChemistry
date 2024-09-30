@@ -14,9 +14,9 @@ export default function BioShade() {
       <div id="bioshade">
         <div id="banner"></div>
         <div id="intro">
-          <h1 className="mb-10">BioShade</h1>
-          <div id="buttons">
-            <Link id="btn-about" to="/about-us">
+          <h1 className="mb-10" data-aos="fade-up">BioShade</h1>
+          <div id="buttons" data-aos="fade-up">
+            <Link id="btn-about" to="/about-us" >
               Know More
             </Link>
             {/* <a
@@ -29,7 +29,7 @@ export default function BioShade() {
             </a> */}
           </div>
         </div>
-        <div id="script" className="container mx-auto">
+        <div id="script" className="container mx-auto" data-aos="fade-up">
           <div id="management">
             {isMobile ? (
               <>
@@ -144,16 +144,16 @@ export default function BioShade() {
             id="about"
             className="texts flex flex-col lg:flex-row items-center gap-4"
           >
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up">
               <span>Código</span>
               <p>TD-C16-i02</p>
             </div>
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up">
               <span>Aviso</span>
               <p>2022-C16i02-10</p>
             </div>
           </div>
-          <p>
+          <p data-aos="fade-up">
             The fermentation medium is essential for the productive and economic
             success of bioproduct fermentation. A proper formulation of the
             medium allows for improved yield, cost, and production time.
@@ -176,10 +176,10 @@ export default function BioShade() {
               width="776px"
               height="78px"
               alt="PRR"
-              className="mx-auto"
+              className="mx-auto"data-aos="fade-up"
             />
           </div>
-          <p id="last">
+          <p id="last" data-aos="fade-up">
             Vouchers para Startups 2049: Desenvolvimento de uma nova base de
             dados digital de pigmentos biológicos
           </p>

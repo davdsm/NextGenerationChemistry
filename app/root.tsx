@@ -14,6 +14,10 @@ import Footer from "./components/footer";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -28,6 +32,14 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duração da animação em milissegundos
+      easing: "ease-in-out", // Tipo de animação
+      once: true, // Anima apenas uma vez ao fazer scroll
+    });
+  }, []);
+
   return (
     <html lang="en">
       <head>

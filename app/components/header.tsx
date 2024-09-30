@@ -5,18 +5,18 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full backdrop-blur-sm bg-transparent text-white z-50 px-10">
       <div className="container mx-auto flex justify-between items-center py-6">
         <Link to="/">
-          <img src="/images/logo.svg" alt="Logo" />
+          <img src="/images/logo.svg" alt="Logo" data-aos="fade-up" />
         </Link>
 
         <nav>
           <ul className="flex gap-8 lg:gap-16">
-            <li>
+            <li data-aos="fade-up">
               <Link to="/about-us" className="text-black font-medium">
                 What About Us
               </Link>
             </li>
 
-            <li>
+            <li data-aos="fade-up">
               <Link to="/bioshade" className="text-gradient font-medium">
                 BioShade
               </Link>
