@@ -1,3 +1,15 @@
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "About us - Next Generation Chemistry" },
+    {
+      name: "description",
+      content: "Next Generation Chemistry about us page.",
+    },
+  ];
+};
+
 /* eslint-disable react/no-unescaped-entities */
 export default function AboutUs() {
   return (
@@ -5,9 +17,8 @@ export default function AboutUs() {
       <section className="pt-24 container mx-auto px-6">
         <div className="flex gap-20 pt-8 lg:pt-20 items-center mb-6 lg:mb-0">
           <h2
-            className="font-inter text-[160px] opacity-10 font-medium min-w-80 hidden sm:block"
+            className="font-inter text-[160px] font-medium min-w-80 hidden sm:block text-[#E8E8E8]"
             data-aos="fade-up"
-            style={{ opacity: "0.1 !important" }}
           >
             01
           </h2>

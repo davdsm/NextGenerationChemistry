@@ -1,6 +1,7 @@
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "@remix-run/react";
 
 const projects = [
   {
@@ -8,24 +9,28 @@ const projects = [
     title: "EcoCleanTex",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
+    slug: "ecoCleanTex",
   },
   {
     image: "bio.png",
     title: "Make it bio",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
+    slug: "make-it-bio",
   },
   {
     image: "EcoCleanTex.svg",
     title: "EcoCleanTex",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
+    slug: "ecoCleanTex",
   },
   {
     image: "bio.png",
     title: "Make it bio",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
+    slug: "make-it-bio",
   },
 ];
 
@@ -74,30 +79,33 @@ export default function OnGoing() {
           }}
           loop
         >
-          {projects.map(({ title, description, image }, key) => (
+          {projects.map(({ title, description, image, slug }, key) => (
             <SwiperSlide key={key}>
-              <div className="relative overflow-hidden h-[474px]">
-                <img
-                  src={`/images/projects/${image}`}
-                  alt={title}
-                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
-                />
-                <div
-                  className="rounded-lg absolute inset-0 bg-black bg-opacity-50 lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"
-                  style={{ clipPath: "inset(0 round 10px)" }}
-                >
-                  <div>
-                    <h3 className="text-xl font-medium font-jakarta">
-                      {title}
-                    </h3>
-                    <p className="mt-2 text-xs font-poppins">{description}</p>
+              <Link to={"/projects/" + slug}>
+                <div className="relative overflow-hidden h-[474px]">
+                  <img
+                    src={`/images/projects/${image}`}
+                    alt={title}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
+                    loading="lazy"
+                  />
+                  <div
+                    className="rounded-lg absolute inset-0 bg-black bg-opacity-50 lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"
+                    style={{ clipPath: "inset(0 round 10px)" }}
+                  >
+                    <div>
+                      <h3 className="text-xl font-medium font-jakarta">
+                        {title}
+                      </h3>
+                      <p className="mt-2 text-xs font-poppins">{description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
           <div
-            className="swiper-button-next bg-white rounded-lg"
+            className="swiper-button-next bg-white rounded-lg buttonHoverIconAnimation"
             style={{ right: 30, width: BUTTON_SIZE, height: BUTTON_SIZE }}
           >
             <img src="/icons/arrow-right-black.svg" alt="Slide next" />

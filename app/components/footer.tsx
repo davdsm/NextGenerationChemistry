@@ -5,18 +5,55 @@ export default function Footer() {
     <footer className="bg-gradient-main p-10">
       <div className="container mx-auto text-white flex gap-12 flex-col font-inter">
         <div className="bg-white p-10 rounded-2xl text-black flex flex-col gap-10 lg:gap-24">
-          <div className="flex justify-between">
+          <div className="flex justify-between text-center lg:text-left flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-0">
             <Link to="/">
               <img src="/images/logo.svg" alt="Logo" data-aos="fade-up" />
             </Link>
 
-            <div className="flex flex-col text-right">
-              {/* <Link
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-0">
+              <div className="min-w-[213px]">
+                <h3 className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]" data-aos="fade-up">
+                  Projects
+                </h3>
+
+                <ul className="font-poppins">
+                  <li data-aos="fade-up">
+                    <Link to={"projects/ecoCleanTex"}>EcoCleanTex</Link>
+                  </li>
+                  <li data-aos="fade-up">
+                    <Link to={"projects/make-it-bio"}>Make it bio</Link>
+                  </li>
+                  <li data-aos="fade-up">
+                    <Link to={"projects/plantcovid"}>Plantcovid</Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="min-w-[213px]">
+                <h3 data-aos="fade-up" className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]">
+                  Legal
+                </h3>
+
+                <ul className="font-poppins">
+                  <li data-aos="fade-up">
+                    <Link to={"privacy-policy"}>Privacy Policy</Link>
+                  </li>
+                  <li data-aos="fade-up">
+                    <Link to={"terms-and-conditions"}>
+                      Terms and Conditions
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-col lg:text-right">
+              <Link
                 to="/contacts"
                 className="mb-4 bg-black text-white rounded-lg px-4 py-2 uppercase font-semibold text-sm"
               >
                 Contacts
-              </Link> */}
+              </Link>
               <a
                 href="tel:+351927812110"
                 className="text-xs font-semibold"

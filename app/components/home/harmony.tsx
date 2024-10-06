@@ -19,7 +19,7 @@ export default function Harmony() {
           </h1>
           <Link
             to="/about-us"
-            className="inline-flex items-center py-2 px-4 font-semibold"
+            className="inline-flex items-center py-2 px-4 font-semibold buttonHoverIconAnimation"
             data-aos="fade-up"
           >
             Know more

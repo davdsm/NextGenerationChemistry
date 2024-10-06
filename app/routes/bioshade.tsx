@@ -4,6 +4,18 @@ import { useMediaQuery } from "react-responsive";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "BioShade - Next Generation Chemistry" },
+    {
+      name: "description",
+      content: "Next Generation Chemistry BioShade page.",
+    },
+  ];
+};
+
 export default function BioShade() {
   const [activeColor, setActiveColor] = useState("N0004");
   const [activeTissue, setActiveTissue] = useState("polyamide");
@@ -14,19 +26,16 @@ export default function BioShade() {
       <div id="bioshade">
         <div id="banner"></div>
         <div id="intro">
-          <h1 className="mb-10" data-aos="fade-up">BioShade</h1>
+          <h1 className="mb-10" data-aos="fade-up">
+            BioShade
+          </h1>
           <div id="buttons" data-aos="fade-up">
-            <Link id="btn-about" to="/about-us" >
+            <Link id="btn-about" to="/about-us">
               Know More
             </Link>
-            {/* <a
-              href="https://ngc.bio/#anchorC"
-              target="_blank"
-              id="btn-contacts"
-              rel="noreferrer"
-            >
+            <Link to="/contacts" id="btn-contacts">
               Contact Us
-            </a> */}
+            </Link>
           </div>
         </div>
         <div id="script" className="container mx-auto" data-aos="fade-up">
@@ -176,7 +185,8 @@ export default function BioShade() {
               width="776px"
               height="78px"
               alt="PRR"
-              className="mx-auto"data-aos="fade-up"
+              className="mx-auto"
+              data-aos="fade-up"
             />
           </div>
           <p id="last" data-aos="fade-up">

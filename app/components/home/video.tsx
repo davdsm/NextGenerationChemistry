@@ -1,6 +1,6 @@
 export default function Video() {
   return (
-    <section className="w-screen lg:h-screen overflow-hidden relative mt-[72px] lg:mt-0">
+    <section className="lg:h-screen overflow-hidden relative mt-[72px] lg:mt-0">
       <video
         className="w-full h-full lg:object-cover"
         autoPlay
@@ -8,6 +8,7 @@ export default function Video() {
         loop
         playsInline
         controls={false}
+        preload="none" 
       >
         <source src="/videos/slogan.mp4" type="video/mp4" />
       </video>
