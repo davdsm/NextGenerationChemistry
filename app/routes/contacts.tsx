@@ -22,10 +22,10 @@ export default function Contacts() {
     const response = await fetch("https://api.davdsm.pt/sendMail", {
       method: "POST",
       body: JSON.stringify({
-        sender: "geral@davdsm.pt",
+        sender: "🧪 Next Generation Chemistry",
         receiver: {
           email: "geral@davdsm.pt",
-          name: "name",
+          name: "Administrador",
         },
         subject: "🔔 Email do website!",
         message: `<h3>Olá!</h3><br><p>Foi enviada uma nova mensagem:</p><p><b>Name: </b>${event.target[0].value}</p><p><b>Email: </b>${event.target[1].value}</p><p><b>Phone Number: </b>${event.target[2].value}</p><p><b>Message: </b>${event.target[3].value}</p>`,
