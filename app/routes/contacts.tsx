@@ -24,7 +24,7 @@ export default function Contacts() {
       body: JSON.stringify({
         sender: "🧪 Next Generation Chemistry",
         receiver: {
-          email: "geral@davdsm.pt",
+          email: "hello@ngc.bio",
           name: "Administrador",
         },
         subject: "🔔 Email do website!",
