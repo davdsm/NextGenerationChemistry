@@ -24,6 +24,24 @@ body {
   }
 }
 
+.menu-icon .st1 {
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  animation: draw-line 2s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 6;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -6;
+  }
+}
+
 .buttonHoverIconAnimation img {
   transition: transform 0.3s ease;
 }

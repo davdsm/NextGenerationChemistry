@@ -42,7 +42,7 @@ export default function BioShade() {
           <div id="management">
             {isMobile ? (
               <>
-                <h3 className="cor">Cor</h3>
+                <h3 className="cor">Color</h3>
 
                 <Swiper
                   modules={[Navigation]}
@@ -91,7 +91,7 @@ export default function BioShade() {
               </>
             ) : (
               <div className="group colors">
-                <h3>Cor</h3>
+                <h3>Color</h3>
                 <ul id="colorsList">
                   {colors
                     .filter((c) => c.tissue === activeTissue)
@@ -112,7 +112,7 @@ export default function BioShade() {
               </div>
             )}
             <div className="group tissue">
-              <h3>Tecido</h3>
+              <h3>Tissue</h3>
               <ul id="tissuesList">
                 {tissues.map((tissue) => (
                   <li
@@ -154,11 +154,11 @@ export default function BioShade() {
             className="texts flex flex-col lg:flex-row items-center gap-4"
           >
             <div className="text-center" data-aos="fade-up">
-              <span>Código</span>
+              <span>Code</span>
               <p>TD-C16-i02</p>
             </div>
             <div className="text-center" data-aos="fade-up">
-              <span>Aviso</span>
+              <span>Notice</span>
               <p>2022-C16i02-10</p>
             </div>
           </div>
@@ -190,8 +190,8 @@ export default function BioShade() {
             />
           </div>
           <p id="last" data-aos="fade-up">
-            Vouchers para Startups 2049: Desenvolvimento de uma nova base de
-            dados digital de pigmentos biológicos
+            Vouchers for Startups 2049: Development of a new digital database of
+            biological pigments
           </p>
         </div>
       </div>

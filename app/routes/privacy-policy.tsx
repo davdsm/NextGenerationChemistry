@@ -15,7 +15,7 @@ export const meta: MetaFunction = () => {
 export default function PrivacyPolicy() {
   return (
     <section className="mt-24 min-h-screen bg-gray-100 flex flex-col">
-      <div className="bg-main text-black py-4 text-center">
+      <div className="bg-main text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Política de Privacidade</h1>
       </div>
       <div className="flex-grow container mx-auto p-8">

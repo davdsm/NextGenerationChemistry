@@ -12,7 +12,10 @@ export default function Footer() {
 
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-0">
               <div className="min-w-[213px]">
-                <h3 className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]" data-aos="fade-up">
+                <h3
+                  className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]"
+                  data-aos="fade-up"
+                >
                   Projects
                 </h3>
 
@@ -30,7 +33,10 @@ export default function Footer() {
               </div>
 
               <div className="min-w-[213px]">
-                <h3 data-aos="fade-up" className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]">
+                <h3
+                  data-aos="fade-up"
+                  className="mb-6 font-jakarta font-semibold text-xs opacity-60 text-[#1B1819]"
+                >
                   Legal
                 </h3>
 
@@ -49,6 +55,7 @@ export default function Footer() {
 
             <div className="flex flex-col lg:text-right">
               <Link
+                data-aos="fade-up"
                 to="/contacts"
                 className="mb-4 bg-black text-white rounded-lg px-4 py-2 uppercase font-semibold text-sm"
               >
@@ -125,7 +132,7 @@ export default function Footer() {
 
         <div className="flex justify-between">
           <p className="text-xs">
-            @ {new Date().getFullYear()} — Todos os direitos reservados
+            @ {new Date().getFullYear()} — All rights reserved
           </p>
 
           <button

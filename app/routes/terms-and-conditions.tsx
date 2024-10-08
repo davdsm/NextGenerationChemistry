@@ -12,11 +12,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-
 export default function TermsAndConditions() {
   return (
     <section className="mt-24 min-h-screen bg-gray-100 flex flex-col">
-      <div className="bg-main text-black py-4 text-center">
+      <div className="bg-main text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Termos de Serviço</h1>
       </div>
       <div className="flex-grow container mx-auto p-8">
@@ -88,8 +87,8 @@ export default function TermsAndConditions() {
         <h2 className="text-2xl font-semibold mb-4">4. Limitações</h2>
         <p className="mb-4">
           Em nenhum caso o Next Generation Chemistry ou seus fornecedores serão
-          responsáveis por quaisquer danos (incluindo, sem limitação, danos
-          por perda de dados ou lucro ou devido a interrupção dos negócios)
+          responsáveis por quaisquer danos (incluindo, sem limitação, danos por
+          perda de dados ou lucro ou devido a interrupção dos negócios)
           decorrentes do uso ou da incapacidade de usar os materiais em Next
           Generation Chemistry, mesmo que Next Generation Chemistry ou um
           representante autorizado da Next Generation Chemistry tenha sido
