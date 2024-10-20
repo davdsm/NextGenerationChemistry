@@ -87,7 +87,6 @@ export default function OnGoing() {
                     src={`/images/projects/${image}`}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
-                    loading="lazy"
                   />
                   <div
                     className="rounded-lg absolute inset-0 bg-black bg-opacity-50 lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"

@@ -9,7 +9,6 @@ export default function Future() {
               alt="Future is Coming"
               className="w-full h-full object-cover rounded-lg"
               data-aos="fade-up"
-              loading="lazy"
             />
           </div>
 
@@ -19,7 +18,6 @@ export default function Future() {
               alt="Future is Coming"
               className="w-full h-full object-cover rounded-lg"
               data-aos="fade-up"
-              loading="lazy"
             />
           </div>
         </div>

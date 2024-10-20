@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react";
 
-
 export default function Achievements() {
   return (
     <section className="container mx-auto px-10 py-20">
@@ -26,7 +25,6 @@ export default function Achievements() {
             alt="Plantcovid"
             className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
             data-aos="fade-up"
-            loading="lazy"
           />
           <div
             className="rounded-lg absolute inset-0 bg-black bg-opacity-50 lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end text-white p-14"
