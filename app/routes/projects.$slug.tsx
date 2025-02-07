@@ -41,15 +41,15 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
     return {
       slug,
       name: "EcoCleanTex",
-      video: "0EF4zVgXTzA",
+      video: false, // 0EF4zVgXTzA
       applicationNumber: null,
       call: null,
       detail: {
         imageSmall: "ecoCleanTex-detail-1.jpg",
         imageBigger: "ecoCleanTex-detail-2.jpg",
         descriptions: [
-          "NGC is also in the hunt for a substitution product that will be able to comply with the strictest industry requirements and be able to replace the current market offer.",
-          "This is still very hush hush, if you want to know more drop us a line at hello@ngc.bio and maybe we can talk some more about this.",
+          "EcoCleanTex uses biosurfactants to create innovative bio-detergents in the textile sector, focusing on production efficiency and enhancing the performance of these compounds.",
+          "The sustainable approach aims to contribute to a more efficient and environmentally friendly textile industry, aligned with the EU decarbonization goals and the strengthening of European industrial capacity.",
         ],
       },
     };
@@ -70,7 +70,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export default function Project() {
-  const project = useLoaderData<typeof loader>();
+  const project = useLoaderData<typeof loader>();  
 
   return (
     <>
@@ -90,13 +90,15 @@ export default function Project() {
           className="relative rounded-lg overflow-hidden w-10/12 h-full"
           data-aos="fade-up"
         >
-          <iframe
-            className="rounded-lg w-full h-[398px] lg:w-[945px] lg:h-[498px] mx-auto"
-            src={`https://www.youtube.com/embed/${project.video}?controls=0&showinfo=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${project.video}`}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {project.video && (
+            <iframe
+              className="rounded-lg w-full h-[398px] lg:w-[945px] lg:h-[498px] mx-auto"
+              src={`https://www.youtube.com/embed/${project.video}?controls=0&showinfo=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${project.video}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
       </section>
 
