@@ -20,19 +20,19 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       },
     };
 
-  if (slug === "make-it-bio")
+  if (slug === "no-petrol")
     return {
       slug,
-      name: "Make it bio",
-      video: "Gef-igXEy9w",
+      name: "NO PETROL",
       applicationNumber: null,
       call: null,
       detail: {
-        imageSmall: "make-it-bio-detail-2.jpg",
-        imageBigger: "make-it-bio-detail-1.jpg",
-        descriptions: [
-          "Make it Bio was born out of the recognition that only a complete action can Change The Impact And Sustainability of the Textile Preparation, Dyeing And Finishing Processes.",
-          "In an unprecedented vision of the process, NGC, formulated and developed products and combinations of active substances to achieve key KPI markers to Reduce H2O, Energy, CO2 Emissions, Discharge of Harmful Waste and the use of Petrochemical originated compounds.",
+        imageSmall: "no-petrol-detail-2.png",
+        imageBigger: "no-petrol-detail-1.png",
+         descriptions: [
+          "Biosoftners ‐ A Touch of Excellence Derived from microalgae, sustainably extracted and purified. Natural bioactive compounds deliver softness and performance to textiles, replacing synthetics with a biodegradable, safe, and eco-responsible finish",
+          "Biodetergents ‐ Power of the Ocean Engineered from marine microorganisms, optimized through synthetic biology. Fermented at scale to produce natural biosurfactants that replace harsh chemicals with biodegradable, safe, and high-performance cleaning power.",
+          "Biopigments ‐ Vibrant Colors Sourced from regenerative agriculture, in harmony with soil and ecosystem health. Natural pigments deliver vibrant, durable, and safe coloration, replacing synthetic dyes with biodegradable and eco-responsible alternatives..",
         ],
       },
     };
@@ -42,14 +42,16 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       slug,
       name: "EcoCleanTex",
       video: false, // 0EF4zVgXTzA
-      applicationNumber: null,
-      call: null,
+      applicationNumber: 14302,
+      call: 'MPr-2023-4',
       detail: {
         imageSmall: "ecoCleanTex-detail-1.jpg",
         imageBigger: "ecoCleanTex-detail-2.jpg",
         descriptions: [
           "EcoCleanTex uses biosurfactants to create innovative bio-detergents in the textile sector, focusing on production efficiency and enhancing the performance of these compounds.",
           "The sustainable approach aims to contribute to a more efficient and environmentally friendly textile industry, aligned with the EU decarbonization goals and the strengthening of European industrial capacity.",
+          "Operation Code: NORTE2030-FEDER-00530300",
+          "Date: 2024-02-08 18:42:46",
         ],
       },
     };

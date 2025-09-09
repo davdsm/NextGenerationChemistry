@@ -13,10 +13,10 @@ const projects = [
   },
   {
     image: "bio.png",
-    title: "Make it bio",
+    title: "NO PETROL",
     description:
-      "Sustainable biosurfactant-based detergents for textile applications.",
-    slug: "make-it-bio",
+      "Nature Decoding and Transformation Production",
+    slug: "no-petrol",
   },
   {
     image: "EcoCleanTex.svg",
@@ -24,13 +24,6 @@ const projects = [
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
     slug: "ecoCleanTex",
-  },
-  {
-    image: "bio.png",
-    title: "Make it bio",
-    description:
-      "Sustainable biosurfactant-based detergents for textile applications.",
-    slug: "make-it-bio",
   },
 ];
 
