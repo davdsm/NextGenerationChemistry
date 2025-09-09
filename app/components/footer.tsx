@@ -24,7 +24,7 @@ export default function Footer() {
                     <Link to={"projects/ecoCleanTex"}>EcoCleanTex</Link>
                   </li>
                   <li data-aos="fade-up">
-                    <Link to={"projects/no-petrol"}>No Petrol</Link>
+                    <Link to={"projects/no-petrol"}>No Petrol®</Link>
                   </li>
                   <li data-aos="fade-up">
                     <Link to={"projects/plantcovid"}>Plantcovid</Link>

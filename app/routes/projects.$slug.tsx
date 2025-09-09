@@ -23,7 +23,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
   if (slug === "no-petrol")
     return {
       slug,
-      name: "No Petrol",
+      name: "No Petrol®",
       applicationNumber: null,
       call: null,
       detail: {
@@ -46,6 +46,8 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
         descriptions: [
           "EcoCleanTex uses biosurfactants to create innovative bio-detergents in the textile sector, focusing on production efficiency and enhancing the performance of these compounds.",
           "The sustainable approach aims to contribute to a more efficient and environmentally friendly textile industry, aligned with the EU decarbonization goals and the strengthening of European industrial capacity.",
+          "EcoCleanTex is an international R&D project focused on developing next-generation bio-based detergents for the textile industry. By replacing conventional petrochemical surfactants with microbial biosurfactants, the project aims to reduce environmental impact while maintaining high performance in textile washing, scouring and bleaching processes.",
+          "Led by NGC, the project will deliver novel formulations tailored to different textile substrates and validate them at industrial scale. EcoCleanTex represents a key step towards greener textile manufacturing and a circular bioeconomy.",
           "Operation Code: NORTE2030-FEDER-00530300",
           "Date: 2024-02-08 18:42:46",
         ],
@@ -171,46 +173,66 @@ export default function Project() {
 
       {project.slug === "no-petrol" && (
         <>
-          <section className="my-40 flex flex-wrap px-8 text-white flex-col md:flex-row">
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
-              <h3 className="font-bold text-2xl z-02 relative">Biofinishing</h3>
-              <p className="z-02 relative">
-                <b>Biosoftners</b> ‐ A Touch of Excellence derived from
-                microalgae, sustainably extracted and purified. Natural
-                bioactive compounds deliver softness and performance to
-                textiles, replacing synthetics with a biodegradable, safe, and
-                eco-responsible finish.
-              </p>
-            </div>
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
-              <h3 className="font-bold text-2xl z-02 relative">
-                Biopreparation
-              </h3>
-              <p className="z-02 relative">
-                <b>Biodetergents</b> ‐ Power of the Ocean, engineered from
-                marine microorganisms, optimized through synthetic biology.
-                Fermented at scale to produce natural biosurfactants that
-                replace harsh chemicals with biodegradable, safe, and
-                high-performance cleaning power.
-              </p>
-            </div>
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-2.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
-              <h3 className="font-bold text-2xl z-02 relative">Biodyeing</h3>
-              <p className="z-02 relative">
-                <b>Biopigments</b> ‐ Vibrant Colors sourced from regenerative
-                agriculture, in harmony with soil and ecosystem health. Natural
-                pigments deliver vibrant, durable, and safe coloration,
-                replacing synthetic dyes with biodegradable and eco-responsible
-                alternatives.
-              </p>
+          <section>
+            <p className="text-center text-xl w-1/2 mx-auto py-40">
+              NO PETROL® is a biotechnology-driven brand transforming the
+              textile industry with sustainable solutions. By replacing
+              petrochemical-based processes with innovations from biology, we
+              deliver performance, responsibility, and a reduced environmental
+              footprint.
+            </p>
+            <div className="flex flex-wrap px-8 text-white flex-col md:flex-row">
+              <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+                <h3 className="font-bold text-2xl z-02 relative">
+                  <b>Biosofteners</b> – A Touch of Excellence
+                </h3>
+                <p className="z-02 relative">
+                  Derived from microalgae, sustainably extracted and purified.
+                  Natural bioactive compounds deliver softness and performance
+                  to textiles, replacing synthetics with a biodegradable, safe,
+                  and eco-responsible finish.
+                </p>
+              </div>
+              <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+                <h3 className="font-bold text-2xl z-02 relative">
+                  <b>Biodetergents</b> ‐ Power of the Ocean
+                </h3>
+                <p className="z-02 relative">
+                  Engineered from marine microorganisms and optimized through
+                  synthetic biology. Fermented at scale to produce natural
+                  biosurfactants that replace harsh chemicals with
+                  biodegradable, safe, and high-performance cleaning power.
+                </p>
+              </div>
+              <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-2.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+                <h3 className="font-bold text-2xl z-02 relative">
+                  <b>Biopigments</b> – Vibrant Colors
+                </h3>
+                <p className="z-02 relative">
+                  Sourced from regenerative agriculture, in harmony with soil
+                  and ecosystem health. Natural pigments deliver vibrant,
+                  durable, and safe coloration, replacing synthetic dyes with
+                  biodegradable and eco-responsible alternatives.
+                </p>
+              </div>
             </div>
           </section>
           <img
-            className="w-full px-20 md:px-0 md:w-1/3 mx-auto pb-40"
+            className="w-full px-20 md:px-0 md:w-1/3 mx-auto py-40"
             src="/images/projects/norte2030.png"
             alt="No Petrol"
           />
         </>
+      )}
+
+      {project.slug === "ecoCleanTex" && (
+        <a target="_blank" href="/ecocleantext.pdf" rel="noreferrer">
+          <img
+            className="w-full px-20 md:px-0 md:w-1/3 mx-auto pb-40"
+            src="/images/projects/norte2030.png"
+            alt="Eco Clean Tex"
+          />
+        </a>
       )}
     </>
   );
