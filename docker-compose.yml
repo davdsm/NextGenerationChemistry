@@ -1,0 +1,14 @@
+services:
+  ngc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ngc
+    hostname: ngc
+    restart: always
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
