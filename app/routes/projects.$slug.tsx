@@ -23,17 +23,13 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
   if (slug === "no-petrol")
     return {
       slug,
-      name: "NO PETROL",
+      name: "No Petrol",
       applicationNumber: null,
       call: null,
       detail: {
-        imageSmall: "no-petrol-detail-2.png",
-        imageBigger: "no-petrol-detail-1.png",
-         descriptions: [
-          "Biosoftners ‐ A Touch of Excellence Derived from microalgae, sustainably extracted and purified. Natural bioactive compounds deliver softness and performance to textiles, replacing synthetics with a biodegradable, safe, and eco-responsible finish",
-          "Biodetergents ‐ Power of the Ocean Engineered from marine microorganisms, optimized through synthetic biology. Fermented at scale to produce natural biosurfactants that replace harsh chemicals with biodegradable, safe, and high-performance cleaning power.",
-          "Biopigments ‐ Vibrant Colors Sourced from regenerative agriculture, in harmony with soil and ecosystem health. Natural pigments deliver vibrant, durable, and safe coloration, replacing synthetic dyes with biodegradable and eco-responsible alternatives..",
-        ],
+        imageSmall: "",
+        imageBigger: "",
+        descriptions: [],
       },
     };
 
@@ -43,7 +39,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       name: "EcoCleanTex",
       video: false, // 0EF4zVgXTzA
       applicationNumber: 14302,
-      call: 'MPr-2023-4',
+      call: "MPr-2023-4",
       detail: {
         imageSmall: "ecoCleanTex-detail-1.jpg",
         imageBigger: "ecoCleanTex-detail-2.jpg",
@@ -72,7 +68,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export default function Project() {
-  const project = useLoaderData<typeof loader>();  
+  const project = useLoaderData<typeof loader>();
 
   return (
     <>
@@ -136,35 +132,86 @@ export default function Project() {
           </div>
         </section>
       )}
+      {project.detail.imageSmall &&
+        project.detail.imageBigger &&
+        project.detail.descriptions && (
+          <section className="my-10 lg:my-20 container mx-auto flex items-center gap-4 lg:gap-20 flex-col lg:flex-row px-6">
+            {project.detail.imageSmall && project.detail.imageBigger && (
+              <div className="lg:w-1/2 flex items-center justify-center relative h-[515px] lg:h-[581px]">
+                <img
+                  src={`/images/projects/${project.detail.imageSmall}`}
+                  alt={project.name}
+                  className="w-[282px] h-[383px] object-cover rounded-lg z-10 mr-[40px] lg:mr-0"
+                  data-aos="fade-up"
+                />
+                <img
+                  src={`/images/projects/${project.detail.imageBigger}`}
+                  alt={project.name}
+                  className="w-[407px] h-[474px] object-cover rounded-lg right-0 absolute top-[20px] left-[20px] lg:left-[unset]"
+                  data-aos="fade-up"
+                />
+              </div>
+            )}
 
-      <section className="my-10 lg:my-20 container mx-auto flex items-center gap-4 lg:gap-20 flex-col lg:flex-row px-6">
-        <div className="lg:w-1/2 flex items-center justify-center relative h-[515px] lg:h-[581px]">
-          <img
-            src={`/images/projects/${project.detail.imageSmall}`}
-            alt={project.name}
-            className="w-[282px] h-[383px] object-cover rounded-lg z-10 mr-[40px] lg:mr-0"
-            data-aos="fade-up"
-          />
-          <img
-            src={`/images/projects/${project.detail.imageBigger}`}
-            alt={project.name}
-            className="w-[407px] h-[474px] object-cover rounded-lg right-0 absolute top-[20px] left-[20px] lg:left-[unset]"
-            data-aos="fade-up"
-          />
-        </div>
+            {project.detail.descriptions && (
+              <div className="lg:w-1/2">
+                {project.detail.descriptions.map((description, index) => (
+                  <p
+                    key={index}
+                    className="font-poppins text-main-black"
+                    data-aos="fade-up"
+                  >
+                    {description}
+                  </p>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
 
-        <div className="lg:w-1/2">
-          {project.detail.descriptions.map((description, index) => (
-            <p
-              key={index}
-              className="font-poppins text-main-black"
-              data-aos="fade-up"
-            >
-              {description}
-            </p>
-          ))}
-        </div>
-      </section>
+      {project.slug === "no-petrol" && (
+        <>
+          <section className="my-40 flex flex-wrap px-8 text-white flex-col md:flex-row">
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+              <h3 className="font-bold text-2xl z-02 relative">Biofinishing</h3>
+              <p className="z-02 relative">
+                <b>Biosoftners</b> ‐ A Touch of Excellence derived from
+                microalgae, sustainably extracted and purified. Natural
+                bioactive compounds deliver softness and performance to
+                textiles, replacing synthetics with a biodegradable, safe, and
+                eco-responsible finish.
+              </p>
+            </div>
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+              <h3 className="font-bold text-2xl z-02 relative">
+                Biopreparation
+              </h3>
+              <p className="z-02 relative">
+                <b>Biodetergents</b> ‐ Power of the Ocean, engineered from
+                marine microorganisms, optimized through synthetic biology.
+                Fermented at scale to produce natural biosurfactants that
+                replace harsh chemicals with biodegradable, safe, and
+                high-performance cleaning power.
+              </p>
+            </div>
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-2.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+              <h3 className="font-bold text-2xl z-02 relative">Biodyeing</h3>
+              <p className="z-02 relative">
+                <b>Biopigments</b> ‐ Vibrant Colors sourced from regenerative
+                agriculture, in harmony with soil and ecosystem health. Natural
+                pigments deliver vibrant, durable, and safe coloration,
+                replacing synthetic dyes with biodegradable and eco-responsible
+                alternatives.
+              </p>
+            </div>
+          </section>
+          <img
+            className="w-full px-20 md:px-0 md:w-1/3 mx-auto pb-40"
+            src="/images/projects/norte2030.png"
+            alt="No Petrol"
+          />
+        </>
+      )}
     </>
   );
 }
