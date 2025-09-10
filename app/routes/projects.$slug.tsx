@@ -23,7 +23,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
   if (slug === "no-petrol")
     return {
       slug,
-      name: "",
+      name: "NO PETROL®",
       video: "dC76AKDFumE",
       applicationNumber: null,
       call: null,
