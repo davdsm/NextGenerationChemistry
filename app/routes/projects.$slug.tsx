@@ -218,21 +218,28 @@ export default function Project() {
             </div>
           </section>
           <img
-            className="w-full px-20 md:px-0 md:w-1/3 mx-auto py-40"
-            src="/images/projects/norte2030.png"
+            className="w-full px-20 md:px-0 md:w-1/5 mx-auto py-40"
+            src="/images/eureka.jpeg"
             alt="No Petrol"
           />
         </>
       )}
 
       {project.slug === "ecoCleanTex" && (
-        <a target="_blank" href="/ecocleantext.pdf" rel="noreferrer">
+        <div className="flex justify-center flex-col items-center w-full">
+          <a target="_blank" href="/ecocleantext.pdf" rel="noreferrer">
+            <img
+              className="w-full mx-auto px-20 md:px-0 md:w-1/3 pb-20"
+              src="/images/projects/norte2030.png"
+              alt="Eco Clean Tex"
+            />
+          </a>
           <img
-            className="w-full px-20 md:px-0 md:w-1/3 mx-auto pb-40"
-            src="/images/projects/norte2030.png"
-            alt="Eco Clean Tex"
+            className="w-full md:w-1/5 px-20 md:px-0 pb-40"
+            src="/images/eureka.jpeg"
+            alt="Eureka"
           />
-        </a>
+        </div>
       )}
     </>
   );
