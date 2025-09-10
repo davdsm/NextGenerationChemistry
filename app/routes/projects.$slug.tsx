@@ -23,7 +23,8 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
   if (slug === "no-petrol")
     return {
       slug,
-      name: "No Petrol®",
+      name: "",
+      video: "dC76AKDFumE",
       applicationNumber: null,
       call: null,
       detail: {
@@ -83,7 +84,11 @@ export default function Project() {
           className="text-5xl font-bold mb-10 text-white font-jakarta"
           data-aos="fade-up"
         >
-          {project.name}
+          {project.slug === "no-petrol" ? (
+            <img className="w-1/3 mx-auto object-contain rounded-lg" src="/images/no-petrol-logo.png" alt="NO PETROL" />
+          ) : (
+            project.name
+          )}
         </h1>
 
         <div
