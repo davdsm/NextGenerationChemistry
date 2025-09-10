@@ -217,11 +217,6 @@ export default function Project() {
               </div>
             </div>
           </section>
-          <img
-            className="w-full px-20 md:px-0 md:w-1/5 mx-auto py-40"
-            src="/images/eureka.jpeg"
-            alt="No Petrol"
-          />
         </>
       )}
 
