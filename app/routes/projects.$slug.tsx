@@ -98,7 +98,7 @@ export default function Project() {
           {project.video && (
             <iframe
               className="rounded-lg w-full h-[398px] lg:w-[945px] lg:h-[498px] mx-auto"
-              src={`https://www.youtube.com/embed/${project.video}?controls=0&showinfo=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${project.video}`}
+              src={`https://www.youtube.com/embed/${project.video}?controls=0&showinfo=0&modestbranding=1&autoplay=1&loop=1&playlist=${project.video}`}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
