@@ -181,17 +181,6 @@ export default function Project() {
             footprint.
           </p>
           <div className="flex flex-wrap px-8 text-white flex-col md:flex-row">
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
-              <h3 className="font-bold text-2xl z-02 relative">
-                <b>Biosofteners</b> – A Touch of Excellence
-              </h3>
-              <p className="z-02 relative">
-                Derived from microalgae, sustainably extracted and purified.
-                Natural bioactive compounds deliver softness and performance to
-                textiles, replacing synthetics with a biodegradable, safe, and
-                eco-responsible finish.
-              </p>
-            </div>
             <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
               <h3 className="font-bold text-2xl z-02 relative">
                 <b>Biodetergents</b> ‐ Power of the Ocean
@@ -212,6 +201,17 @@ export default function Project() {
                 ecosystem health. Natural pigments deliver vibrant, durable, and
                 safe coloration, replacing synthetic dyes with biodegradable and
                 eco-responsible alternatives.
+              </p>
+            </div>
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+              <h3 className="font-bold text-2xl z-02 relative">
+                <b>Biosofteners</b> – A Touch of Excellence
+              </h3>
+              <p className="z-02 relative">
+                Derived from microalgae, sustainably extracted and purified.
+                Natural bioactive compounds deliver softness and performance to
+                textiles, replacing synthetics with a biodegradable, safe, and
+                eco-responsible finish.
               </p>
             </div>
           </div>
