@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { MetaFunction } from "@remix-run/node";
+import { buildMeta } from "~/lib/seo";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Terms and Conditions - Next Generation Chemistry" },
-    {
-      name: "description",
-      content: "Next Generation Chemistry Terms and Conditions page.",
-    },
-  ];
+  return buildMeta({
+    title: "Terms and Conditions",
+    description:
+      "Terms and conditions for using the Next Generation Chemistry website.",
+    path: "/terms-and-conditions",
+    noindex: true,
+  });
 };
 
 export default function TermsAndConditions() {

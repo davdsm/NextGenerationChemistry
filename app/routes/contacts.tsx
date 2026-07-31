@@ -1,14 +1,14 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
+import { buildMeta } from "~/lib/seo";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Contacts - Next Generation Chemistry" },
-    {
-      name: "description",
-      content: "Next Generation Chemistry contacts page.",
-    },
-  ];
+  return buildMeta({
+    title: "Contacts",
+    description:
+      "Contact Next Generation Chemistry — email hello@ngc.bio or call +351 927 812 110 to discuss bio-based textile chemistry solutions.",
+    path: "/contacts",
+  });
 };
 
 /* eslint-disable react/no-unescaped-entities */

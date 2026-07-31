@@ -17,6 +17,7 @@ import "swiper/css/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { organizationJsonLd } from "~/lib/seo";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,14 +30,16 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  { rel: "icon", href: "/favicon.ico" },
+  { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duração da animação em milissegundos
-      easing: "ease-in-out", // Tipo de animação
-      once: true, // Anima apenas uma vez ao fazer scroll
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
@@ -45,8 +48,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="application-name" content="Next Generation Chemistry" />
         <Meta />
         <Links />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd()),
+          }}
+        />
       </head>
       <body>
         <Header />

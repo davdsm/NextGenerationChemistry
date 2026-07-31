@@ -5,25 +5,25 @@ import { Link } from "@remix-run/react";
 
 const projects = [
   {
-    image: "EcoCleanTex.svg",
+    image: "EcoCleanTex.jpg",
     title: "EcoCleanTex",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
     slug: "ecoCleanTex",
   },
   {
-    image: "bio.png",
+    image: "bio.jpg",
     title: "NO PETROL",
     description:
       "Nature Decoding and Transformation Production",
     slug: "no-petrol",
   },
   {
-    image: "EcoCleanTex.svg",
-    title: "EcoCleanTex",
+    image: "plantcovid.jpg",
+    title: "Plantcovid",
     description:
-      "Sustainable biosurfactant-based detergents for textile applications.",
-    slug: "ecoCleanTex",
+      "Plant-based compounds to mitigate viral and microbial threats.",
+    slug: "plantcovid",
   },
 ];
 

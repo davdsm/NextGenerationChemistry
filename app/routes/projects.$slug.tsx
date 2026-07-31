@@ -1,5 +1,6 @@
 import { MetaFunction } from "@remix-run/node";
 import { redirect, useLoaderData } from "@remix-run/react";
+import { buildMeta } from "~/lib/seo";
 
 export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
   if (slug === "plantcovid")
@@ -10,8 +11,8 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       applicationNumber: 4759,
       call: "Eurostars 3 - Call 5",
       detail: {
-        imageSmall: "plantcovid-detail-1.png",
-        imageBigger: "plantcovid-detail-2.png",
+        imageSmall: "plantcovid-detail-1.jpg",
+        imageBigger: "plantcovid-detail-2.jpg",
         descriptions: [
           "Leading a partnership in developing compounds capable of mitigating the  spread of Sars- Cov2 virus, NGC has partnered with CBQF – Centro de  Biotecnologia e Química Fina, Universidade Católica Portugues; IPB –  Instituto Politécnico de Bragança and iMM-Instituto de Medicina  Molecular.",
           "We are researching naturally occurring compounds in plants that have  capabilities in destroying the Sars-Cov2 virus. These compound are also  being studied with the intent to discover if they are capable of stoping  growth of bacteria and fungi that cause several diseases.",
@@ -61,13 +62,22 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   if (!data) return [];
 
-  return [
-    { title: `${data.name} - Next Generation Chemistry` },
-    {
-      name: "description",
-      content: `Next Generation Chemistry ${data.name} page.`,
-    },
-  ];
+  const description =
+    data.detail.descriptions[0] ||
+    `${data.name} — a Next Generation Chemistry project developing bio-based solutions for a cleaner textile industry.`;
+
+  const image = data.detail.imageBigger
+    ? `/images/projects/${data.detail.imageBigger}`
+    : data.slug === "no-petrol"
+      ? "/images/projects/bio.jpg"
+      : "/images/home.jpg";
+
+  return buildMeta({
+    title: data.name,
+    description: description.slice(0, 160),
+    path: `/projects/${data.slug}`,
+    image,
+  });
 };
 
 export default function Project() {
@@ -186,7 +196,7 @@ export default function Project() {
             footprint.
           </p>
           <div className="flex flex-wrap px-8 text-white flex-col md:flex-row">
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-3.jpg')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
               <h3 className="font-bold text-2xl z-02 relative">
                 <b>Biodetergents</b> ‐ Power of the Ocean
               </h3>
@@ -197,7 +207,7 @@ export default function Project() {
                 safe, and high-performance cleaning power.
               </p>
             </div>
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-2.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-2.jpg')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
               <h3 className="font-bold text-2xl z-02 relative">
                 <b>Biopigments</b> – Vibrant Colors
               </h3>
@@ -208,7 +218,7 @@ export default function Project() {
                 eco-responsible alternatives.
               </p>
             </div>
-            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.png')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
+            <div className="mb-8 relative bg-[url('/images/projects/no-petrol-detail-1.jpg')] bg-no-repeat bg-cover w-full md:w-[30%] mx-auto px-8 pt-60 pb-4 rounded-md before:inset-0 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] before:absolute before:top-0 before:left-0  before:w-full before:h-full z-01 before:rounded-md">
               <h3 className="font-bold text-2xl z-02 relative">
                 <b>Biosofteners</b> – A Touch of Excellence
               </h3>

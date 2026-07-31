@@ -5,15 +5,15 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { MetaFunction } from "@remix-run/node";
+import { buildMeta } from "~/lib/seo";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "BioShade - Next Generation Chemistry" },
-    {
-      name: "description",
-      content: "Next Generation Chemistry BioShade page.",
-    },
-  ];
+  return buildMeta({
+    title: "BioShade",
+    description:
+      "BioShade by Next Generation Chemistry — bio-based shade and textile chemistry solutions powered by nature.",
+    path: "/bioshade",
+  });
 };
 
 export default function BioShade() {

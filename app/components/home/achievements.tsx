@@ -21,7 +21,7 @@ export default function Achievements() {
       <Link to="/projects/plantcovid">
         <div className="relative overflow-hidden w-[290px] h-[448px] mx-auto">
           <img
-            src={`/images/projects/plantcovid.svg`}
+            src={`/images/projects/plantcovid.jpg`}
             alt="Plantcovid"
             className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-lg"
             data-aos="fade-up"

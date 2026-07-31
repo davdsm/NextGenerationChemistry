@@ -8,7 +8,8 @@ export default function Video() {
         loop
         playsInline
         controls={false}
-        preload="none"
+        preload="metadata"
+        poster="/images/home.jpg"
       >
         <source src="/videos/slogan.mp4" type="video/mp4" />
       </video>

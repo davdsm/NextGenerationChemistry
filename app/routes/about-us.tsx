@@ -1,13 +1,14 @@
 import type { MetaFunction } from "@remix-run/node";
+import { buildMeta } from "~/lib/seo";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "About us - Next Generation Chemistry" },
-    {
-      name: "description",
-      content: "Next Generation Chemistry about us page.",
-    },
-  ];
+  return buildMeta({
+    title: "About us",
+    description:
+      "Learn how Next Generation Chemistry empowers chemistry by nature, developing bio-based alternatives that make textiles cleaner and more sustainable.",
+    path: "/about-us",
+    image: "/images/future.jpg",
+  });
 };
 
 /* eslint-disable react/no-unescaped-entities */
@@ -68,7 +69,7 @@ export default function AboutUs() {
             Future is <br /> now!
           </h2>
 
-          <img src="/images/future.svg" alt="Future" data-aos="fade-up" />
+          <img src="/images/future.jpg" alt="Future of sustainable chemistry" data-aos="fade-up" />
 
           <p className="max-w-96" data-aos="fade-up">
             Imagine a future where every thread tells a story of harmony with

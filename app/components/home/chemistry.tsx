@@ -3,7 +3,7 @@ export default function Chemistry() {
     <section className="lg:h-[375px] flex container mx-auto p-10 flex-col lg:flex-row gap-6">
       <div className="lg:w-1/2 h-full m-auto flex items-center">
         <img
-          src="/images/next-generation-chemistry.png"
+          src="/images/next-generation-chemistry.jpg"
           alt="Next Generation Chemistry" data-aos="fade-up"
         />
       </div>

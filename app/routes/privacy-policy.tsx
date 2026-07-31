@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { MetaFunction } from "@remix-run/node";
+import { buildMeta } from "~/lib/seo";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Privacy Policy - Next Generation Chemistry" },
-    {
-      name: "description",
-      content: "Next Generation Chemistry privacy policy page.",
-    },
-  ];
+  return buildMeta({
+    title: "Privacy Policy",
+    description:
+      "Read the Next Generation Chemistry privacy policy and how we handle personal data on ngc.bio.",
+    path: "/privacy-policy",
+    noindex: true,
+  });
 };
 
 export default function PrivacyPolicy() {
