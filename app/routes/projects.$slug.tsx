@@ -39,7 +39,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
     return {
       slug,
       name: "EcoCleanTex",
-      video: false, // 0EF4zVgXTzA
+      video: "ghRbqZVrD_g",
       applicationNumber: 14302,
       call: "MPr-2023-4",
       detail: {
