@@ -1,5 +1,30 @@
-node_modules
+# Dependencies
+node_modules/
 
-/.cache
-/build
+# Build output
+/build/
+/.cache/
+*.tsbuildinfo
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code config/docs — local only, never pushed to this shared repo
+.claude/
+CLAUDE.md
