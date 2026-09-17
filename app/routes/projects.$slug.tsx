@@ -43,8 +43,8 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       applicationNumber: 14302,
       call: "MPr-2023-4",
       detail: {
-        imageSmall: "ecoCleanTex-detail-1.jpg",
-        imageBigger: "ecoCleanTex-detail-2.jpg",
+        imageSmall: "ecoCleanTex-detail-1.png",
+        imageBigger: "ecoCleanTex-detail-2.png",
         descriptions: [
           "EcoCleanTex uses biosurfactants to create innovative bio-detergents in the textile sector, focusing on production efficiency and enhancing the performance of these compounds.",
           "The sustainable approach aims to contribute to a more efficient and environmentally friendly textile industry, aligned with the EU decarbonization goals and the strengthening of European industrial capacity.",

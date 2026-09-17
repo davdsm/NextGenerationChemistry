@@ -5,7 +5,7 @@ import { Link } from "@remix-run/react";
 
 const projects = [
   {
-    image: "EcoCleanTex.jpg",
+    image: "EcoCleanTex.png",
     title: "EcoCleanTex",
     description:
       "Sustainable biosurfactant-based detergents for textile applications.",
