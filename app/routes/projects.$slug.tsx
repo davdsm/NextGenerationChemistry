@@ -8,6 +8,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       slug,
       name: "Plantcovid",
       video: "RhkkU9AitF4",
+      videoUnavailable: false,
       applicationNumber: 4759,
       call: "Eurostars 3 - Call 5",
       detail: {
@@ -26,6 +27,7 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
       slug,
       name: "NO PETROL®",
       video: "dC76AKDFumE",
+      videoUnavailable: false,
       applicationNumber: null,
       call: null,
       detail: {
@@ -39,7 +41,8 @@ export const loader = ({ params: { slug } }: { params: { slug?: string } }) => {
     return {
       slug,
       name: "EcoCleanTex",
-      video: "ghRbqZVrD_g",
+      video: false, // ghRbqZVrD_g
+      videoUnavailable: true,
       applicationNumber: 14302,
       call: "MPr-2023-4",
       detail: {
@@ -113,6 +116,31 @@ export default function Project() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
+          )}
+          {project.videoUnavailable && (
+            <div className="rounded-lg w-full h-[398px] lg:w-[945px] lg:h-[498px] mx-auto bg-neutral-900 flex flex-col items-center justify-center text-center px-6">
+              <svg
+                className="w-14 h-14 text-white/70 mb-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="7" x2="12" y2="13" />
+                <line x1="12" y1="16.5" x2="12.01" y2="16.5" />
+              </svg>
+              <p className="text-white text-xl font-semibold font-jakarta">
+                Video temporarily unavailable
+              </p>
+              <p className="text-white/60 text-sm mt-2 font-poppins">
+                We&apos;re experiencing a technical issue. Please try again
+                later.
+              </p>
+            </div>
           )}
         </div>
       </section>
